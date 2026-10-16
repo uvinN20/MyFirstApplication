@@ -14,9 +14,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editTextText;
-    private Button clickMe;
-    private TextView name;
+    private EditText userInput;
+    private Button clickBtn;
+    private TextView outputTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +30,18 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        editTextText = findViewById(R.id.editTextText);
-        clickMe = findViewById(R.id.btnId);
-        name = findViewById(R.id.nameId);
+        userInput = (EditText) findViewById(R.id.uvin123);
+        clickBtn = (Button) findViewById(R.id.btid123);
+        outputTxt = (TextView) findViewById(R.id.nameId);
 
-        clickMe.setOnClickListener(new View.OnClickListener() {
+        clickBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String inputName = editTextText.getText().toString().trim();
+                String inputName = userInput.getText().toString().trim();
                 if (!inputName.isEmpty()) {
-                    name.setText(inputName);
+                    outputTxt.setText(inputName);
                 } else {
-                    name.setText("Suhail Razeeth");
+                    outputTxt.setText("Uvin Nanayakkara");
                 }
             }
         });
