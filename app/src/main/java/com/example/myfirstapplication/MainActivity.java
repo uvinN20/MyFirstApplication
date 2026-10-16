@@ -28,9 +28,12 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        userInput = findViewById(R.id.uvin123);
+        userInput = findViewById(R.id.textid1);
         Button clickBtn = findViewById(R.id.btid123);
         outputTxt = findViewById(R.id.nameId);
+
+        // when click the button, user input should appear in text view
+        // getting the user input
 
         clickBtn.setOnClickListener(v -> {
             String inputName = userInput.getText().toString().trim();
