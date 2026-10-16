@@ -13,7 +13,8 @@
         android:id="@+id/uvin123"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your name"
+        android:autofillHints="name"
+        android:hint="@string/hint_enter_name"
         android:inputType="textPersonName"
         android:minHeight="48dp" />
 
@@ -22,14 +23,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Save" />
+        android:text="@string/btn_save" />
 
     <TextView
         android:id="@+id/nameId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Your name will appear here"
+        android:text="@string/default_name_placeholder"
         android:textSize="22sp"
         android:textStyle="bold" />
 
