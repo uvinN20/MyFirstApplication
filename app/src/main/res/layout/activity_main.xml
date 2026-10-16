@@ -6,22 +6,31 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="24dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/nameId"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your name will appear here"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/btnId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Click Me" />
+
+    <TextView
+        android:id="@+id/nameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Your name will appear here"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

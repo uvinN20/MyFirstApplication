@@ -3,6 +3,7 @@ package com.example.myfirstapplication;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText editTextText;
     private Button clickMe;
     private TextView name;
 
@@ -28,13 +30,19 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        editTextText = findViewById(R.id.editTextText);
         clickMe = findViewById(R.id.btnId);
         name = findViewById(R.id.nameId);
 
         clickMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name.setText("Suhail Razeeth");
+                String inputName = editTextText.getText().toString().trim();
+                if (!inputName.isEmpty()) {
+                    name.setText(inputName);
+                } else {
+                    name.setText("Suhail Razeeth");
+                }
             }
         });
     }
